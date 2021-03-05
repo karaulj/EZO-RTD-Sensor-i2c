@@ -1,10 +1,10 @@
 # EZO-RTD-Sensor-i2c
-A simple C library for using Atlas Scientific's EZO RTD sensor with the I2C protocol.
+A simple C library for reading data from Atlas Scientific's EZO RTD sensor with the I2C protocol.
 
-[Atlas Scientific's EZO RTD sensor](https://atlas-scientific.com/embedded-solutions/ezo-rtd-temperature-circuit/) is a temperature sensor accessible through serial or I2C. They provide code for issuing commands/taking readings via Python or Arduino/C++ but none for C so I thought I'd share the library I developed for a project I've been working on.
+[Atlas Scientific's EZO RTD sensor](https://atlas-scientific.com/embedded-solutions/ezo-rtd-temperature-circuit/) is a temperature sensor accessible through serial or I2C. They provide code for issuing commands/taking readings via Python or Arduino/C++ but none for C so I thought I'd share a helper library I developed.
 
 ## Usage
-Only the "Read" command is implemented. To issue other commands you can use the sample code that Atlas Scientific provides or modify this library.
+Only the "Read" command is implemented. You can use the sample code from Atlas Scientific for other commands.
 
 MCU I2C implementations differ so no MCU-specific functions are used. Here's a sample snippet using STM32's HAL library in blocking mode (tested on the NUCLEO-L432KC board):
 ```
